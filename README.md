@@ -33,7 +33,7 @@ In the initial data perparation phase, the follow tasks were performed
 ---
 1. Which of the three seventh generation consoles (Xbox 360, Playstation 3, and Nintendo Wii) had the highest total sales globally.
 2. Visualise the average sales for games in the most popular three genres and to differentiate between NA, EU, and global sales.
-3. Are some genres significantly more likely to perform better or worse in Japan than others? If so, which ones?
+3. Are some genres significantly more likely to perform better or worse in Japan than others?
 
 ## Data Analysis
 ---
@@ -81,5 +81,25 @@ plt.ylabel('Average Sales (in millions)')
 plt.xlabel('Genre')
 plt.legend(title='Region')
 plt.show()
+```
+![Average Sales of Games in the Most Popular Three Genres](https://github.com/user-attachments/assets/acd5352d-1460-412c-81e4-3265c6ec0ce1)
+
+3. The genres that are more likely to perform better or worse in Japan than others
+
+```
+import pandas as pd
+import scipy.stats as stats
+
+# Load the dataset
+vgsales = pd.read_csv('vgsales.csv')
+
+# Group by Genre and calculate the average sales in Japan
+average_jp_sales_by_genre = vgsales.groupby('Genre')['JP_Sales'].mean().reset_index()
+
+# Sort genres by JP Sales
+average_jp_sales_by_genre = average_jp_sales_by_genre.sort_values(by='JP_Sales', ascending=False)
+
+# Display the average sales in Japan by genre
+average_jp_sales_by_genre
 ```
 
