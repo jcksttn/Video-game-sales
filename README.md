@@ -1,4 +1,14 @@
 # 🎮 Video Game Sales Analysis
+---
+
+Contents
+---
+- [Project Overview](#project-overview)
+- [Data Source](#data-source)
+- [Tools](#tools)
+- [Data Cleaning](#data-cleaning)
+- [Goals](goals)
+- [Data Analysis](#data-analysis)
 
 ## Project Overview
 ---
@@ -12,7 +22,7 @@ This project usings video games sales data to
 - Sales of games by genre
 - Sale of games by region around the world
 
-## Dataset
+## Data Source
 ---
 Video Game Sales
 - [Download here](https://www.kaggle.com/datasets/gregorut/videogamesales)
